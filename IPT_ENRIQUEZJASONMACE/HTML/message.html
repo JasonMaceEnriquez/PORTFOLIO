@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/accountodactyl-ui/newPageVendor.b55e7dd5.css" />
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/accountodactyl-ui/newPage.86e46bed.css" />
+</head>
+<body>
+    <!-- Sidebar for Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="buttons">
+            <a href="../HTML/index.html"><button>Home</button></a>
+            <a href="../HTML/friends.html"><button>Friends</button></a>
+            <a href="../HTML/message.html"><button>Messages</button></a>
+        </div>
+        <div class="logo">
+            <img src="../IMAGE/logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">Messages</div>
+        <div class="messages-container">
+            <!-- Message List -->
+            <div class="message-list">
+                <div class="message-item" onclick="selectMessage('Doge')">
+                    <div class="message-avatar">
+                        <img src="../IMAGE/friend1.jpg" alt="Doge">
+                    </div>
+                    <div class="message-preview">
+                        <h3>Doge</h3>
+                        <p>Much wow! Are we still on for tonight?</p>
+                    </div>
+                </div>
+                <div class="message-item" onclick="selectMessage('Distracted Boyfriend')">
+                    <div class="message-avatar">
+                        <img src="../IMAGE/friend2.jpg" alt="Distracted Boyfriend">
+                    </div>
+                    <div class="message-preview">
+                        <h3>Distracted Boyfriend</h3>
+                        <p>I sent over the designs, let me know what you think!</p>
+                    </div>
+                </div>
+                <div class="message-item" onclick="selectMessage('Grumpy Cat')">
+                    <div class="message-avatar">
+                        <img src="../IMAGE/friend3.jpg" alt="Grumpy Cat">
+                    </div>
+                    <div class="message-preview">
+                        <h3>Grumpy Cat</h3>
+                        <p>Don’t forget about the meeting tomorrow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message View -->
+            <div class="message-view">
+                <h2 id="message-title">Select a conversation</h2>
+                <p id="message-content">Click on a message from the list to view details.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Read URL parameter for friend's name
+        const urlParams = new URLSearchParams(window.location.search);
+        const friendName = urlParams.get('friend');
+        
+        // Display the conversation based on the selected friend
+        if (friendName) {
+            document.getElementById("message-title").innerText = `Conversation with ${friendName}`;
+            document.getElementById("message-content").innerText = `You are now chatting with ${friendName}.`;
+        }
+    </script>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

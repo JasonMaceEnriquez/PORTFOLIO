@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/accountodactyl-ui/newPageVendor.b55e7dd5.css" />
+    <link rel="stylesheet" href="https://lolstatic-a.akamaihd.net/accountodactyl-ui/newPage.86e46bed.css" />
+</head>
+<body>
+    <!-- Sidebar for Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <div class="buttons">
+            <a href="../HTML/index.html"><button>Home</button></a>
+            <a href="../HTML/friends.html"><button>Friends</button></a>
+            <a href="../HTML/message.html"><button>Messages</button></a>
+        </div>
+        <div class="logo">
+            <img src="../IMAGE/logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">Friends</div>
+        <div class="friends-container">
+            <!-- Friends List -->
+            <div class="friends-list-container">
+                <div class="friend-item">
+                    <div class="friend-avatar">
+                        <img src="../IMAGE/friend1.jpg" alt="Doge">
+                    </div>
+                    <div class="friend-details">
+                        <h3>Doge</h3>
+                        <p>Much wow</p>
+                    </div>
+                    <!-- Change button to href -->
+                    <a href="../HTML/message.html?friend=Doge">
+                        <button class="friend-action">Message</button>
+                    </a>
+                </div>
+            
+                <div class="friend-item">
+                    <div class="friend-avatar">
+                        <img src="../IMAGE/friend2.jpg" alt="Distracted Boyfriend">
+                    </div>
+                    <div class="friend-details">
+                        <h3>Distracted Boyfriend</h3>
+                        <p>Last seen: 2 hours ago</p>
+                    </div>
+                    <!-- Change button to href -->
+                    <a href="../HTML/message.html?friend=Distracted%20Boyfriend">
+                        <button class="friend-action">Message</button>
+                    </a>
+                </div>
+            
+                <div class="friend-item">
+                    <div class="friend-avatar">
+                        <img src="../IMAGE/friend3.jpg" alt="Grumpy Cat">
+                    </div>
+                    <div class="friend-details">
+                        <h3>Grumpy Cat</h3>
+                        <p>Offline</p>
+                    </div>
+                    <!-- Change button to href -->
+                    <a href="../HTML/message.html?friend=Grumpy%20Cat">
+                        <button class="friend-action">Message</button>
+                    </a>
+                </div>
+            </div>
+            
+                <!-- Add more friends here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
